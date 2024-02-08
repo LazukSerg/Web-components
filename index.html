@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Отзывы клиентов "ЧИСТЫЙ ДОМ"</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>КЛИНИНГОВАЯ ФИРМА "ЧИСТЫЙ ДОМ"</h1>
+    <img src = "https://sun9-65.userapi.com/impg/oaTZJvM-H6oyXCTcMm3UEIHIGUkW6URkKsp09Q/duciYSBEDNg.jpg?size=807x326&quality=95&sign=1350e283587cdc8276b6e121e70b84d0&c_uniq_tag=_6JFuaCaS7aOLDWcNTef41US7jvz6nZS5TDN_n-Zpbs&type=album">
+    <p>Чтобы стать лучше, мы заинтересованы в удовлетворенности клиентов нашими услугами.  Уже 3-й год подряд мы высчитываем индекс удовлетворенности, в формировании которого вы сможете принять участие.</p>
+    <div class="div-index">
+      <img class="index-like" src = "https://chiefengineer.ru/wp-content/uploads/2019/07/index-udovletvorennosti-csi.jpg">
+    </div>
+    <p>Оставляйте свои комментарии о нашей компании. Будем рады не только благодарностям, но и конструктивной критике.</p>
+
+    <comment-tree></comment-tree>
+
+    <template id="commentTemplate">
+      <style>
+        .like {
+          width: 50px;
+          margin-top: 5px;
+          margin-left: 3px;
+          background-color: rgb(36, 221, 36);
+          border-radius: 8px;
+        }
+
+        .like::before {
+          content: " \1F44D"
+        }
+
+        .answer {
+          width: 100px;
+          margin-top: 5px;
+          border-radius: 8px;
+        }
+
+        .delete {
+          width: 100px;
+          margin-top: 5px;
+          background-color: coral;
+          border-radius: 8px;
+        }
+
+        .reply-comments {
+          padding-left: 15px;
+          padding-top: 2px;
+        }
+      </style>
+      <slot></slot> 
+      <button id="like" class="like"><span id="like-count" class="like-count">0</span></button>
+      <button id="answer" class="answer">Ответить</button>
+      <button id="delete" class="delete">Удалить</button>
+      <div id="reply-comments" class="reply-comments"></div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

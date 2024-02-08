@@ -1,0 +1,26 @@
+body {
+    background: #F2F2F2;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 30px;
+    margin-bottom: 300px;
+}
+  
+h1{
+  color: #4C4C4C;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #BEBEBE;
+}
+
+.div-index {
+  padding-left: 40px;
+}
+
+.index-like {
+  width: 80%
+}
+
+p{
+  font:italic;
+}
